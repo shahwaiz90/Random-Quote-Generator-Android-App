@@ -1,7 +1,7 @@
 # Random-Quote-Generator-Android-App
 This codebase was orignally created for saudi federation of cybersecurity programming and drones for an interview.
 
-Its a random programing quotes application. It takes all sensitive information through gradle properties and then loads up in the bytecode after compiling it. 
+Its a random programing quotes application. It takes all sensitive information through gradle properties and then loads up in the class files after compiling it. 
 
 # Flow of the app:
  - If internet available, hits the API and save the response in shared preference 
@@ -14,7 +14,7 @@ Its a random programing quotes application. It takes all sensitive information t
  - Kotlin
  - Dagger2
  - RxJava
- - Offline and error handling Scenarios (Using Shared preference by storing json object in it)
+ - Online/ Offline and error handling Scenarios (Using Shared preference by storing json object in it)
  - Separate module (networkSdk) for modularity purpose
  
  # Offline and Online Scenarios respectively
