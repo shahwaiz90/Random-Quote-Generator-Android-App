@@ -1,0 +1,3 @@
+include ':networkSdk'
+include ':app'
+rootProject.name = "RandomProgrammingQuotes"

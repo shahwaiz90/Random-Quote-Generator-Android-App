@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RandomProgrammingQuotes</string>
+    <string name="online_msg_scenario">Showing From API, please turn off internet to see from local storage</string>
+    <string name="offline_msg_scenario">Showing From Local Storage, please turn on Internet to get latest quote.</string>
+    <string name="label_loading">Loading…</string>
+    <string name="label_need_internet">Need Internet Connection to load Quotes</string>
+    <string name="label_getting_quotes">Getting Quotes…</string>
+    <string name="label_initial_quote_msg">Please press the button to get latest quote</string>
+    <string name="label_initial_author_msg">Author Name</string>
+    <string name="label_initial_date_msg">Date/Time</string>
+    <string name="label_initial_btn_msg">Get Quote</string>
+    <string name="label_initial_status_msg">Status</string>
+    <string name="label_name_me">Ahmad Shahwaiz</string>
+    <string name="label_github_link">github.com/shahwaiz90</string>
+    <string name="label_linkedin_me">linkedin.com/in/ahmadshahwaiz/</string>
+</resources>

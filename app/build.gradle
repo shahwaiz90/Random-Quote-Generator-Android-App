@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        versionCode Integer.parseInt(project.property('project.buildnumber'))
+        versionName project.property('project.buildversion')
+        applicationId "com.ahmadshahwaiz.randomprogrammingquotes"
+        buildConfigField "Boolean", "LOGS_ENABLED", project.property('project.logsEnabled')
+        buildConfigField "String", "QUOTE_API_HOST", project.property('project.quoteServicesHost')
+        minSdkVersion 23
+        targetSdkVersion 29
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".dev"
+        }
+        release {
+            debuggable false
+            minifyEnabled = false
+            multiDexEnabled = false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':networkSdk')
+    implementation Libraries.kotlinStdLib
+    implementation Libraries.ktx
+    implementation Libraries.appCompatX
+    implementation Libraries.constraintLayout
+    implementation Libraries.dagger
+    implementation Libraries.lifecycleRuntime
+    implementation Libraries.lifecycleExtensions
+    implementation Libraries.rxjava
+    implementation Libraries.rxAndroid
+    implementation Libraries.retrofit
+    implementation Libraries.timber
+    implementation Libraries.gson
+    implementation Libraries.rxjavaAdapter
+    implementation Libraries.daggerAndroid
+    implementation Libraries.daggerAndroidSupport
+    implementation Libraries.multiDex
+    kapt Libraries.daggerAndroidProcessor
+    kapt Libraries.daggerCompiler
+    kapt Libraries.lifecycleCompiler
+}
